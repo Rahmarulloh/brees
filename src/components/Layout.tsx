@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import Dropdown from "../images/Dropdown.png";
+import B from "../images/B.svg";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
+  BoldOutlined,
+  MessageOutlined,
+  UserSwitchOutlined,
+  AppstoreOutlined,
+  CopyOutlined,
+  FileTextOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
 
@@ -18,27 +23,56 @@ const LayoutComponent: React.FC = () => {
 
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        style={{ padding: 0, background: colorBgContainer }}
+      >
         <div className="demo-logo-vertical" />
+        {/* <img src={Dropdown} alt="logoBree" /> */}
         <Menu
-          theme="dark"
+          theme="light"
           mode="inline"
           defaultSelectedKeys={["1"]}
           items={[
             {
+              key: "0",
+              icon: (
+                <BoldOutlined
+                  style={{
+                    color: "blue",
+                    fontWeight: "900",
+                    textShadow: `-4px 4px 3px rgba(0,0,0,0.59)`,
+                  }}
+                />
+              ),
+              label: <h3 style={{ color: "dark", fontWeight: 600 }}>Brees</h3>,
+            },
+            {
               key: "1",
-              icon: <UserOutlined />,
-              label: "nav 1",
+              icon: <AppstoreOutlined />,
+              label: "Dashboard",
             },
             {
               key: "2",
-              icon: <VideoCameraOutlined />,
-              label: "nav 2",
+              icon: <CopyOutlined />,
+              label: "Projects",
             },
             {
               key: "3",
-              icon: <UploadOutlined />,
-              label: "nav 3",
+              icon: <FileTextOutlined />,
+              label: "Tasks",
+            },
+            {
+              key: "4",
+              icon: <MessageOutlined />,
+              label: "Messages",
+            },
+            {
+              key: "5",
+              icon: <UserSwitchOutlined />,
+              label: "Users",
             },
           ]}
         />
@@ -58,9 +92,9 @@ const LayoutComponent: React.FC = () => {
         </Header>
         <Content
           style={{
-            margin: "24px 16px",
+            margin: "1px 1px",
             padding: 24,
-            minHeight: 650,
+            minHeight: 700,
             background: colorBgContainer,
           }}
         >
