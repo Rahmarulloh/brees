@@ -6,8 +6,8 @@ import DragAndDropExample from "./dnd";
 function App() {
   return (
     <div className="App">
-      {/* <LayoutComponent /> */}
-      <DragAndDropExample />
+      <LayoutComponent />
+      {/* <DragAndDropExample /> */}
     </div>
   );
 }
