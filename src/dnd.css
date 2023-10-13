@@ -1,0 +1,33 @@
+.drag-and-drop-example {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.drag-and-drop-example ul {
+  list-style: none;
+  padding: 0;
+}
+
+.drag-and-drop-example li {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.drag-and-drop-example li:hover {
+  background-color: #eee;
+}
+
+.drag-and-drop-example li.dragging {
+  background-color: #ccc;
+}
+
+.drag-and-drop-example li.droppable {
+  border: 1px dashed #ccc;
+}
+
+.drag-and-drop-example li.droppable.over {
+  background-color: #eee;
+}
