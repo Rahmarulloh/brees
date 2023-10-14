@@ -13,6 +13,7 @@ import {
   FileTextOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button, theme } from "antd";
+import Todo from "./todo";
 
 const { Header, Sider, Content } = Layout;
 
@@ -42,7 +43,8 @@ const LayoutComponent: React.FC = () => {
             {
               key: "0",
               icon: (
-                <BoldOutlined className="fs-4 fw-bolder"
+                <BoldOutlined
+                  className="fs-4 fw-bolder"
                   style={{
                     color: "blue",
                     fontWeight: "900",
@@ -50,7 +52,14 @@ const LayoutComponent: React.FC = () => {
                   }}
                 />
               ),
-              label: <h5 style={{ color: "dark", position: "absolute", top: "8px" }} className="fw-semibold">Brees</h5>,
+              label: (
+                <h5
+                  style={{ color: "dark", position: "absolute", top: "8px" }}
+                  className="fw-semibold"
+                >
+                  Brees
+                </h5>
+              ),
             },
             {
               key: "1",
@@ -125,6 +134,8 @@ const LayoutComponent: React.FC = () => {
             eum alias. Delectus libero qui ipsa quaerat laudantium cum, vero
             cumque animi ut inventore. Quos, dicta?
           </p>
+
+          <Todo name="In progress" />
         </Content>
       </Layout>
     </Layout>

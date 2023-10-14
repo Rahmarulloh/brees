@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
+import React from "react";
 
 class Navbar extends React.Component {
   render() {
@@ -16,10 +15,10 @@ class Navbar extends React.Component {
       >
         <div className="left">
           <button className="btn btn-light">
-            <i class="fa-solid fa-table-list me-1"></i> List
+            <i className="fa-solid fa-table-list me-1"></i> List
           </button>
           <button className="btn btn-light mx-2">
-            <i class="me-1 fa-regular fa-calendar-days"></i>
+            <i className="me-1 fa-regular fa-calendar-days"></i>
             Calendar
           </button>
         </div>
